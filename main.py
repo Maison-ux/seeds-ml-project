@@ -7,7 +7,7 @@ from sklearn.metrics import accuracy_score
 # 1. CARREGAR DADOS
 # ==============================
 
-df = pd.read_csv("seeds.csv")
+df = pd.read_csv("Data/seeds.csv", sep="\s+")
 
 print("\nColunas do dataset:")
 print(df.columns)
@@ -52,4 +52,6 @@ y_pred = model.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 
 print(f"\nAcurácia do modelo: {accuracy:.2f}")
+
+print(df.head())
 
